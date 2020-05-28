@@ -4,59 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="static/output.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato|Montserrat:700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/output.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<title>Document</title>
 </head>
 
 <body>
-{% include 'navbar.html' %}
+	{% include 'navbar.html' %}
 
-{% block body %}
-{% endblock %}
-<script>
-var Menu = {
-  el: {
-    menu: $('.menu'),
-    menuTop: $('.menu-top'),
-    menuClose: $('.menu-close'),
-    menuMiddle: $('.menu-middle'),
-    menuBottom: $('.menu-bottom'),
-    menuHidden: $('.menu-hidden'),
-    menuText: $('.menu-text')
-  },
-  
-  init: function() {
-    Menu.bindUIactions();
-  },
-  
-  bindUIactions: function() {
-    Menu.el.menu
-        .on(
-          'click',
-        function(event) {
-        Menu.activateMenu(event);
-        event.preventDefault();
-      }
-    );
-  },
-  
-  activateMenu: function() {
-    Menu.el.menuTop.toggleClass('menu-top-expand expand');
-    Menu.el.menuMiddle.toggleClass('menu-middle-expand expand');
-    Menu.el.menuBottom.toggleClass('menu-bottom-expand expand'); 
-    Menu.el.menuHidden.toggleClass('menu-hidden-expand expand'); 
-    Menu.el.menuText.toggleClass('menu-text-expand');
-    Menu.el.menuClose.toggleClass('menu-close-visible');
-  }
-};
-  
-  //Stop menu item click closing the menu
-  $(".menu .menu-global").click(function(e) {
-      e.stopPropagation();
-});
-
-Menu.init();
-</script>
+	{% block body %}
+	{% endblock %}
+	<script src="{{ url_for('static', filename='nav.js') }}"></script>
 </body>
 
 </html>

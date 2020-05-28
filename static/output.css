@@ -9,10 +9,6 @@ body {
   user-select: none;
 }
 
-h1, h2 {
-  font-family: "Montserrat", sans-serif;
-  margin: 10px 0;
-}
 
 span {
   display: inline-block;
@@ -51,19 +47,6 @@ code {
   max-width: 800px;
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#footer-text {
-  padding-left: 60px;
-  opacity: 0.6;
-}
 
 .menu {
   position: relative;
