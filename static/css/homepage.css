@@ -131,3 +131,29 @@ transform: skew(0deg, 10deg);
 }
 }
 
+
+/*---- what we do----*/
+.parallax-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/building.jpg');
+    background-size: cover;
+    margin-top: -25%;
+    background-attachment: fixed;
+}
+@media(max-width:960px){
+    .parallax-div{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    background-image: url('/static/images/building.jpg');
+    background-size: cover;
+    margin-top: -45%;
+    background-attachment: fixed;
+}
+}
