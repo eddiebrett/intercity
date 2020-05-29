@@ -108,6 +108,8 @@ code {
   top: 36px;
 }
 
+
+
 .menu-text {
   color: #000;
   opacity: 0;
@@ -155,6 +157,8 @@ code {
   transition: all 0.5s 0.2s, left 0.1s 0s;
 }
 
+
+
 .menu-text-expand {
   opacity: 0.6;
   padding: 10px;
@@ -167,10 +171,10 @@ code {
 /***Will inherit transition w/out delay unless overriden***/
 .menu-hidden-expand:nth-child(1) {
   background: #E0F7FA;
-  top: 50px;
+  top: 200px;
 }
 
-.menu-hidden-expand:nth-child(2) {
+/* .menu-hidden-expand:nth-child(2) {
   background: #B2EBF2;
   top: 100px;
 }
@@ -183,9 +187,9 @@ code {
 .menu-hidden-expand:nth-child(4) {
   background: #4DD0E1;
   top: 200px;
-}
+} 
 
-.menu-hidden-expand:nth-child(5) {
+ .menu-hidden-expand:nth-child(5) { 
   background: #26C6DA;
   top: 250px;
 }
@@ -214,15 +218,16 @@ code {
   background: #006064;
   top: 500px;
 }
-
+*/
 .menu-hidden-expand:nth-child(4) {
   -webkit-transition: all 0.5s 0.1s, left 0.1s 0s;
   transition: all 0.5s 0.1s, left 0.1s 0s;
 }
 
+
 .menu-hidden-expand:nth-last-of-type(1) {
   height: 100px;
-}
+} 
 
 /**************END ADDITIONAL MENU ITEMS*******************/
 
