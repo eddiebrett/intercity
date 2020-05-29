@@ -28,5 +28,10 @@ anime.timeline({loop: false})
     opacity: 0,
     duration: 1000,
     easing: "easeOutExpo",
-    delay: 10000
+    delay: 20000
   });
+
+
+
+  //aboutpage//
+  

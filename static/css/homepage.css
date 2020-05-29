@@ -101,3 +101,35 @@ body{
   display: inline-block;
   line-height: 1em;
 }
+
+
+
+/*------- about page----------*/
+
+.skewed-box{
+background: white;
+padding; 100px 0;
+transform: skew(0deg, -10deg) translateY(-120px);
+}
+
+.skewed-container{
+padding: 150px 200px;
+transform: skew(0deg, 10deg);
+}
+
+}
+
+@media(max-width:960px){
+    ..skewed-box{
+        background: white;
+padding; 50px 0;
+transform: skew(0deg, -10deg) translateY(-120px);
+    }
+    .skewed-container{
+padding: 75px 100px;
+transform: skew(0deg, 10deg);
+}
+
+}
+}
+
