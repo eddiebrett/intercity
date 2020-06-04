@@ -50,8 +50,8 @@ code {
 .site-logo {
   position: relative;
   top: 15px;
-  left: 65%;
-width: 35%;
+  left: 68%;
+width: 25%;
   z-index: 100;
 }
 
@@ -64,7 +64,7 @@ width: 35%;
 .menu {
   position: relative;
   margin: 0 20px 0 0;
-  padding-left: 1.25em;
+  /* padding-left: 1.25em; */
   cursor: pointer;
   width: 30px;
   height: 50px;
