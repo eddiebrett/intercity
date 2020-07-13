@@ -63,44 +63,6 @@
 
 
 
-/* animation typing text on homepage ------ */
-
-.header-content h1{
-    font-size: 200%;
-    margin-bottom: 0;
-     font-weight: 400;
-}
-
-.ml11 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.15em;
-}
-
-.ml11 .line {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 3px;
-  background-color: #fff;
-  transform-origin: 0 50%;
-}
-
-.ml11 .line1 { 
-  top: 0; 
-  left: 0;
-}
-
-.ml11 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
-
-
 /*------- about page----------*/
 
 .skewed-box{
@@ -156,111 +118,6 @@ transform: skew(0deg, 10deg);
 }
 
 
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
-  background-color: transparent;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transition-timing-function: ease-out;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-box-back {
-  background-color: #1b1463;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.pic-job{
-    width: 200px;
-  height: 200px;
-}
-
-.font-job{
-    font-size: x-small;
-    padding: 1em;
-}
-
-
-what-we-do{
-    margin-top: 2em;
-}
-
-
-/*---- slide */
-
-
-.textWithBlurredBg{
-    width:100%;
-    height:auto;
-    display:inline-block;
-    position:relative;
-    transition:.3s;
-    margin:2px;
-  }
-  
-  .textWithBlurredBg img{
-    height:200px;
-    transition:.3s;
-    border-radius:1px;
-  }
-  
-  .textWithBlurredBg:hover img{
-    filter:blur(1px) brightness(10%);
-    box-shadow:0 0 10px cyan;
-  }
-   
-  .textWithBlurredBg :not(img){
-    position:absolute;
-    z-index:1;
-    top:4%;
-    width:100%;
-    text-align:center;
-    color:#fff;
-    opacity:0;
-    transition:.3s;
-  }
-  
-  .textWithBlurredBg:hover :not(img){
-    opacity:1;
-  }
-
-.small-title{
-    display: flex;
-    font-size: 1rem;
-}
 /*reference*/
 .parallax2 {
   /* The image used */
@@ -277,7 +134,53 @@ position: relative;
   background-size: cover;
 }
 
+/*----What we do ---*/
+.job-container {
+  position: relative;
+  width: 50%;
+}
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.overlay-we-do {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.job-container:hover .overlay-we-do {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /*testomnials*/
 
