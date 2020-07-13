@@ -5,7 +5,7 @@ footer {
 }
 
 footer {
-    background: linear-gradient(245deg, #18f0b8, #E8EAEB, #FCFF00);
+    background: linear-gradient(245deg, #36bcef, #25358c);
     background-size: 600% 600%;
     -webkit-animation: Gradient 16s ease infinite;
     -moz-animation: Gradient 16s ease infinite;
@@ -35,4 +35,8 @@ footer {
 
 .fa{
      padding: 5px 5px 5px 5px;
+}
+
+.footer-text{
+    color: white;
 }
