@@ -72,7 +72,7 @@ transform: skew(0deg, -10deg) translateY(-120px);
 }
 
 .skewed-container{
-padding: 150px 200px;
+padding: 100px 100px;
 transform: skew(0deg, 10deg);
 }
 
@@ -173,7 +173,7 @@ position: relative;
 .text {
   color: white;
   font-size: 15px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -197,17 +197,17 @@ position: relative;
     display: flex;
     justify-content: center;
     position: relative;
-    padding-bottom: 15px;
+    
 }
 
 /*--testamonial---*/
-.test-row{
+/* .test-row{
     display: flex;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 100px;
-}
+    margin: 50px;
+} */
 
 .icon-row{
     
