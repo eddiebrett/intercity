@@ -6,7 +6,7 @@ footer {
 
 footer {
     background: linear-gradient(245deg, white, #36bcef,  #25358c);
-    background-size: 600% 600%;
+    /* background-size: 600% 600%; */
     -webkit-animation: Gradient 16s ease infinite;
     -moz-animation: Gradient 16s ease infinite;
     animation: Gradient 16s ease infinite;
