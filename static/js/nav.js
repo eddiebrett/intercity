@@ -34,6 +34,7 @@ var Menu = {
   }
 };
   
+
   //Stop menu item click closing the menu
   $(".menu .menu-global").click(function(e) {
       e.stopPropagation();

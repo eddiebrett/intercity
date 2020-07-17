@@ -15,6 +15,10 @@ def candidates():
 def clients():
     return render_template('clients.html')
 
+@app.route('/legal')
+def legal():
+    return render_template('legal.html')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
