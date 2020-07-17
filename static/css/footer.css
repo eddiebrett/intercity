@@ -35,13 +35,18 @@ footer {
 
 .fa{
      padding: 5px 5px 5px 5px;
-     color: white;
+     color: #25358c;
 }
+.fa:hover{
+     
+     color: #7480c5;
+}
+
 
 .footer-text{
     color: white;
 }
 
 img.corporate-image {
-    width: 30%;
+    width: 100%;
 }
