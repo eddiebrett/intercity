@@ -41,3 +41,7 @@ footer {
 .footer-text{
     color: white;
 }
+
+img.corporate-image {
+    width: 30%;
+}
