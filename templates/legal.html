@@ -1,11 +1,11 @@
 {% extends 'layout.html' %}
 {% block body %}
-<header>
-  <div class="overlay"></div>
+<header class="legal">
+  <div class="legal-overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="static/london.mp4" type="video/mp4">
   </video>
-  <div class="container h-100">
+  <div class="container legal h-100">
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
         <h1 class="display-3">Legal, Memberships and Accreditations</h1>
@@ -18,14 +18,14 @@
 <section>
 
 <!-- Page Content -->
-    <div class="container">
+    <div class="legal container">
 
       <!-- Page description -->
-     <p>The foundations of Intercity Partners is built upon trust within our organination aswell as with our working clients and relationships. We pride ourselves on our ethics and transparency and so to enable offer peace of mind to our client we have taken step in secure a number of accreditations and insurances.
+     <h2>Intercity Partners is built upon trust within our organination aswell as with our clients. We pride ourselves on our ethics and transparency and so to enable peace of mind we have taken a number of steps to secure accreditations and insurances.
 
     
 
-</p>
+</h2>
 
       <!-- Project One -->
       <div class="row">
@@ -52,13 +52,13 @@ and credentials to the industry. </p>
       <div class="row">
         <div class="col-md-7">
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="{{url_for('static', filename='images/rec.jpg')}}" alt="">
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project Two</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+          <h3>REC Certified</h3>
+          <p>REC Corporate members pass a compliance test to join and maintain its membership. It enables you to know that we hold the relevant legislation and uphold the ethics in our Code of Professional Practice.</p>
+          <a class="btn btn-primary" href="#">View Certificate</a>
         </div>
       </div>
       <!-- /.row -->
@@ -69,30 +69,13 @@ and credentials to the industry. </p>
       <div class="row">
         <div class="col-md-7">
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="{{url_for('static', filename='images/SBinsure.png')}}" alt="">
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project Three</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Four -->
-      <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Four</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+          <h3>Simply Business Insurance</h3>
+          <p>Business Insurance tailored specifically for our organisation.</p>
+          <a class="btn btn-primary" href="#">View Certificate</a>
         </div>
       </div>
       <!-- /.row -->
