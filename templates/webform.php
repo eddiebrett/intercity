@@ -1,10 +1,38 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<?php
+    $message_sent= false;
+
+    if(isset($_POST['email']) && $_POST['email'] != ''){
+
+        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+
+        $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $messageSubject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $to = "eddiebrett@hotmail.co.uk";
+        $subject = "website message";
+        $body = "";
+
+        $body .= "From: ".$userName. "\r\n";
+        $body .= "Email: ".$userEmail. "\r\n";
+        $body .= "Message: ".$message. "\r\n";
+
+        mail($to,$subject,$body);
+
+        $message_sent= true;
+}
+    
+?>
+
+
 <div class="contact_container">
 
 <?php
-    if(message_sent):
+    if($message_sent):
 ?>
     <h3>Thanks we'll be in touch</h3>
 
@@ -32,11 +60,11 @@ Tel: 0208 980 8583
                 <form action="webform.php" method="POST" class="form">
             <div class="form-group">
                 <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" tabindex="1" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" tabindex="1" required>
             </div>
             <div class="form-group">
                 <label for="email" class="form-label">Your Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="jane@doe.com" tabindex="2" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" tabindex="2" required>
             </div>
             <!-- <div class="form-group">
                 <label for="subject" class="form-label">Subject</label>
@@ -61,4 +89,4 @@ Tel: 0208 980 8583
 		</div>
 	</div>
 
-{% endblock %}
+{% endblock %} 
