@@ -16,13 +16,37 @@ E2 9HE<br><br>
 Tel: 0208 980 8583
 
             </div>
+            
 			<div class="right">
 				<h2>Contact Us</h2>
-				<input type="text" class="field" placeholder="Your Name">
-				<input type="text" class="field" placeholder="Your Email">
-				<input type="text" class="field" placeholder="Phone">
-				<textarea placeholder="Message" class="field"></textarea>
+                <form action="webform.php" method="POST" class="form">
+            <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" tabindex="1" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="jane@doe.com" tabindex="2" required>
+            </div>
+            <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Hello There!" tabindex="3" required>
+            </div>
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="4"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn">Send Message!</button>
+            </div>
+        </form>
+                <!-- <form action="webform.php" method="POST">
+				<input name="name" type="text" class="field" placeholder="Your Name">
+				<input name="email" type="text" class="field" placeholder="Your Email">
+				<input name="phone" type="text" class="field" placeholder="Phone">
+				<textarea name="message" placeholder="Message" class="field"></textarea>
 				<button class="btn">Send</button>
+                </form> -->
 			</div>
 		</div>
 	</div>
