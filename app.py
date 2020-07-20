@@ -25,6 +25,5 @@ def contact():
     return render_template('webform.php')
 
 
-
 if __name__ == "__main__":
     app.run(debug=True)
