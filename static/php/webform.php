@@ -9,7 +9,7 @@
         $messageSubject = $_POST['subject'];
         $message = $_POST['message'];
 
-        $to = "eddiebrett@hotmail.co.uk";
+        $to = "brett@hotmail.com";
         $subject = "website message";
         $body = "";
 
