@@ -1,6 +1,9 @@
-from flask import Flask, render_template
-
-app = Flask(__name__)
+from flask import Flask, render_template, request, flash
+from forms import ContactForm
+ 
+app = Flask(__name__) 
+ 
+app.secret_key = 'development key'
 
 
 @app.route('/')
@@ -20,10 +23,16 @@ def legal():
     return render_template('legal.html')
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('webform.php')
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+  form = ContactForm()
+ 
+  if request.method == 'POST':
+    if form.validate() == False:
+      flash('All fields are required.')
+      return render_template('contact.html', form=form)
+    else:
+      return 'Form posted.'
+ 
+  elif request.method == 'GET':
+    return render_template('contact.html', form=form)
