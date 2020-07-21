@@ -1,7 +1,8 @@
 from flask_wtf import Form
-from wtforms.fields import TextField, BooleanField, SubmitField, TextAreaField
+from wtforms.fields import TextField, SubmitField, TextAreaField
+# BooleanField,
 from wtforms import validators
-from wtforms.validators import Required, ValidationError
+# from wtforms.validators import Required, ValidationError
 
 
 class ContactForm(Form):
