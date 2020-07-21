@@ -1,7 +1,1 @@
-# Code Institute
-
-Welcome eddiebrett,
-
-We have preinstalled all of the tools you need to get started.
-
-Happy coding!
+Website for Intercity Partners
