@@ -65,7 +65,7 @@ def contact():
   form = ContactForm()
  
   if request.method == 'POST':
-    if form.validate() == False:
+    if form.validate() is False:
       flash('All fields are required.')
       return render_template('contact.html', form=form)
     else:
