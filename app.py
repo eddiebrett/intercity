@@ -7,7 +7,7 @@ mail = Mail()
 
 app = Flask(__name__)
 
-app.secret_key = 'development key'
+# app.secret_key = 'development key'
 
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
