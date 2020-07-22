@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, flash
 from forms import ContactForm
 from flask_mail import Message, Mail
-import os
+
 
 mail = Mail()
 
