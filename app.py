@@ -14,7 +14,7 @@ app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
 app.config["MAIL_USERNAME"] = 'bobdylan20202020@gmail.com'
 app.config["MAIL_PASSWORD"] = 'BobDylan2020'
- 
+
 mail.init_app(app)
 
 
@@ -40,24 +40,24 @@ def legal():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-  form = ContactForm()
+    form = ContactForm()
 
-  if request.method == 'POST':
-    if form.validate() is False:
-      flash('All fields are required.')
-      return render_template('contact.html', form=form)
+    if request.method == 'POST':
+        if form.validate() is False:
+            flash('All fields are required.')
+        return render_template('contact.html', form=form)
+    elif request.method == 'GET':
+        return render_template('contact.html', form=form)
     else:
-      msg = Message(form.subject.data, sender='contact@example.com', recipients=['your_email@example.com'])
-      msg.body = """
-      From: %s &lt;%s&gt;
-      %s
-      """ % (form.name.data, form.email.data, form.message.data)
-      mail.send(msg)
- 
-      return render_template('contact.html', success=True)
- 
-  elif request.method == 'GET':
-    return render_template('contact.html', form=form)
+        msg = Message(form.subject.data, sender='contact@example.com',
+                          recipients=['your_email@example.com'])
+        msg.body = """
+            From: %s &lt;%s&gt;
+            %s
+            """ % (form.name.data, form.email.data, form.message.data)
+        mail.send(msg)
+
+    return render_template('contact.html', success=True)
 
 
 if __name__ == "__main__":
