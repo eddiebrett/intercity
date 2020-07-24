@@ -1,14 +1,32 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<div class="contact_container">
-		<div class="contact-box">
-			<div class="left"><h1>Clients</h1>
+
+
+<header class="legal">
+  <div class="legal-overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="static/london.mp4" type="video/mp4">
+  </video>
+  <div class="container legal h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Clients</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="conatainer">
+			
 <p>Here at InterCity Partners we strive to keep the highest level of service while successfully sourcing and placing candidates into each position. We specialise in placing Contract and Permanent candidates into Technology and Business Change areas within a wide range of clients from Start-Ups to Industry leading organisations – Investment Banks and Retail banks. Asset Management, Investment Management and Wealth Management organisations along with Retail, Media, E-commerce and Manufacturing organisations etc. 
 InterCity have the flexibility to tailor its service to the requirements of each individual client. If you are a hiring manager looking to hire in your team or you are a HR representative going to market, we save you the time and stress. Each consultant you liaise with believe in Quality over Quantity and will take the time to understand your requirement, qualify each candidate and shortlist the best possible candidates in the market. 
 To discuss how InterCity Partners can help your company recruit talented employees, call our specialist team today on 020 8980 8583 or submit your vacancy here!</p></div>
+
+<div class="contact_container">
+		
 			<div class="right">
-             <img src="{{url_for('static', filename='images/desk.jpeg')}}" alt="desk" class="image">
+            
 				<h2>Contact Us</h2>
 				<input type="text" class="field" placeholder="Your Name">
                 <input type="text" class="field" placeholder="Company's name">
