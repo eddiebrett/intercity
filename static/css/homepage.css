@@ -75,7 +75,7 @@ transform: skew(0deg, -10deg) translateY(-120px);
 }
 
 .skewed-container{
-padding: 100px 100px;
+padding: 200px 100px;
 transform: skew(0deg, 10deg);
 }
 
