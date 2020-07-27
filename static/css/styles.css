@@ -30,7 +30,8 @@ p{
 }
 
 h1{
-    margin: 30px
+    margin: 30px;
+    text-align: center;
 }
 
 h2{

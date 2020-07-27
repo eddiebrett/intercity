@@ -69,7 +69,7 @@
 
 .skewed-box{
 background: white;
-padding: 100px 0;
+/* padding: 100px 0; */
 transform: skew(0deg, -10deg) translateY(-120px);
 
 }
