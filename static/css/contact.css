@@ -185,3 +185,10 @@ form input#submit:hover{
   padding: 10px;
   width: 400px;
 }
+
+
+iframe{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+}

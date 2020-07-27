@@ -24,8 +24,9 @@ body{
 
 
 p{
-    margin: 30px;
+    padding: 3%;
     text-align: left;
+    font-size: large;
 }
 
 h1{
@@ -35,3 +36,4 @@ h1{
 h2{
     margin-bottom: 50px;
 }
+
