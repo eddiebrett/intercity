@@ -3,23 +3,23 @@
 {% block body %}
 
 <header class="legal">
-  <div class="legal-overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="static/balloon.mp4" type="video/mp4">
-  </video>
-  <div class="container legal h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3">Contact us</h1>
-      </div>
-    </div>
-  </div>
+	<div class="legal-overlay"></div>
+	<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+		<source src="static/balloon.mp4" type="video/mp4">
+	</video>
+	<div class="container legal h-100">
+		<div class="d-flex h-100 text-center align-items-center">
+			<div class="w-100 text-white">
+				<h1 class="display-3">Contact us</h1>
+			</div>
+		</div>
+	</div>
 </header>
 
 <div class="contact_container">
-
-		<div class="right">
-		
+	<div class="contact-box">
+		<div class="left">
+			<h1>Clients</h1>
 			<br><br>
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.848276563022!2d-0.058115084784400556!3d51.534342616554746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cdd09f30e0f%3A0x839b8c83f7470e1e!2s10%2C%2049%20Mowlem%20St%2C%20London%20E2%209HE!5e0!3m2!1sen!2suk!4v1594825836916!5m2!1sen!2suk"
@@ -33,50 +33,54 @@ London<br>
 E2 9HE<br><br>
 Tel: 0208 980 8583
 
-          
 
-		
+
+			<div class="right">
 				<h2>Contact</h2>
- 
-  {% if success %}
-    <p>Thank you for your message. We'll get back to you shortly.</p>
- 
-  {% else %}
- 
-    {% for message in form.name.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    {% for message in form.email.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    {% for message in form.subject.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    {% for message in form.message.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    <form action="{{ url_for('contact') }}" method=post>
-      {{ form.hidden_tag() }}
- 
-      {{ form.name.label }}
-      {{ form.name }}
- 
-      {{ form.email.label }}
-      {{ form.email }}
- 
-      {{ form.subject.label }}
-      {{ form.subject }}
- 
-      {{ form.message.label }}
-      {{ form.message }}
- 
-      {{ form.submit }}
-    </form>
+
+				{% if success %}
+				<p>Thank you for your message. We'll get back to you shortly.</p>
+
+				{% else %}
+
+				{% for message in form.name.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				{% for message in form.email.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				{% for message in form.subject.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				{% for message in form.message.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				<form action="{{ url_for('contact') }}" method=post>
+					{{ form.hidden_tag() }}
+
+					{{ form.name.label }}
+					{{ form.name }}
+
+					{{ form.email.label }}
+					{{ form.email }}
+
+					{{ form.subject.label }}
+					{{ form.subject }}
+
+					{{ form.message.label }}
+					{{ form.message }}
+
+					{{ form.submit }}
+				</form>
+			</div>
 		</div>
 	</div>
+</div>
+
+
 {% endif %}
 {% endblock %}
