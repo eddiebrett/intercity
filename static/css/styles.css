@@ -23,9 +23,10 @@ body{
 
 
 p{
-    padding: 3%;
+    padding: 3% 3% 0 3%;
     text-align: left;
     font-size: large;
+    margin-bottom: 0;
 }
 
 h1{

@@ -21,7 +21,7 @@
 	z-index: -1;
 }
 .contact-box{
-	max-width: 850px;
+	max-width: 1060px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
@@ -35,7 +35,7 @@
     text-align: left;
 } */
 
-.left{
+/* .left{
 	background: url("img/bg.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
@@ -43,7 +43,7 @@
 
 .right{
 	padding: 25px 40px;
-}
+} */
 
 h2{
 	position: relative;
@@ -188,7 +188,7 @@ form input#submit:hover{
 
 
 iframe{
-    width: 200%;
-    length: 200%;
+    width: 100%;
+
 }
     
