@@ -138,7 +138,7 @@ transform: skew(0deg, 10deg);
   
 position: relative;
   /* Set a specific height */
-  height: 750px;
+  height: 670px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
