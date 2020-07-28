@@ -253,7 +253,7 @@ position: relative;
 .parallax2 {
     background-image: url(/static/images/handshake.jpg);
     position: relative;
-    height: 1500px;
+    height: 1200px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

@@ -16,7 +16,7 @@ from wtforms.fields.html5 import EmailField
 # from flask.ext.wtf import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
 
 class ContactForm(Form):
-    name = TextField("Name poop", validators=[InputRequired('Please enter your name.')])
+    name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     email = EmailField("Email",  validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
     message = TextAreaField("Message",  validators=[InputRequired("Please enter a message.")])
