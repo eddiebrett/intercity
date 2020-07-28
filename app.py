@@ -38,9 +38,10 @@ def clients():
 @app.route('/legal')
 def legal():
     return render_template('legal.html')
+  
 
 @app.route('/privacy')
-def legal():
+def privacy():
     return render_template('privacy.html')
 
 
