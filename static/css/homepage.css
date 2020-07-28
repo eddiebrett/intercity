@@ -243,4 +243,23 @@ position: relative;
     width: 60%;
     z-index: 100;
 }
+
+.parallax2 {
+    background-image: url(/static/images/handshake.jpg);
+    position: relative;
+    height: 1500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay-we-do.we-do-2 {
+    left: -100px;
+}
+
+.overlay-we-do.we-do-4 {
+    left: -100px;
+}
+
 }
