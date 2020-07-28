@@ -39,6 +39,10 @@ def clients():
 def legal():
     return render_template('legal.html')
 
+@app.route('/privacy')
+def legal():
+    return render_template('privacy.html')
+
 
 # @app.route('/contact', methods=['GET', 'POST'])
 # def contact():
