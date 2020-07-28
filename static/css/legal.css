@@ -52,6 +52,6 @@ header .legal-overlay {
     height: auto;
 }
 
-.p-legal{
-    padding-bottom: 3%;
+p.p-legal {
+    padding-bottom: 30%;
 }

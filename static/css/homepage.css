@@ -138,7 +138,7 @@ transform: skew(0deg, 10deg);
   
 position: relative;
   /* Set a specific height */
-  height: 600px;
+  height: 750px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -176,6 +176,12 @@ position: relative;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
+
+
+.overlay-we-do.we-do-4 {
+    left: -70px;
+}
+
 
 .job-container:hover .overlay-we-do {
   -webkit-transform: scale(1);
@@ -260,6 +266,17 @@ position: relative;
 
 .overlay-we-do.we-do-4 {
     left: -100px;
+}
+
+.footer-text {
+    color: white;
+    text-align: center;
+}
+
+.display-3 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 }
