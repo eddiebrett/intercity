@@ -55,3 +55,7 @@ header .legal-overlay {
 p.p-legal {
     padding-bottom: 10%;
 }
+
+a.btn.btn-primary {
+    margin-top: 5%;
+}
