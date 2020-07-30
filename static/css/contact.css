@@ -41,9 +41,12 @@
 	height: 100%;
 }
 
+*/
+
+
 .right{
 	padding: 25px 40px;
-} */
+} 
 
 h2{
 	position: relative;
@@ -80,6 +83,10 @@ h2:after{
 }
 
 textarea{
+	min-height: 150px;
+}
+
+.textarea{
 	min-height: 150px;
 }
 

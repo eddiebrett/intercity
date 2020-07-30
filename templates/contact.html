@@ -69,17 +69,17 @@ Tel: 0208 980 8583
 			<form action="{{ url_for('contact') }}" method=post>
 				{{ form.hidden_tag() }}
 
-				{{ form.name.label(class_="field") }}
+				{{ form.name.label }}
 				{{ form.name(class_="field")}}
 
-				{{ form.email.label(class_="field") }}
+				{{ form.email.label }}
 				{{ form.email(class_="field")}}
 
-				{{ form.subject.label(class_="field") }}
+				{{ form.subject.label }}
 				{{ form.subject(class_="field")}}
 
-				{{ form.message.label(class_="field") }}
-				{{ form.message(class_="field")}}
+				{{ form.message.label }}
+				{{ form.message(class_="field textarea")}}
 
 				{{ form.submit }}
 			</form>
