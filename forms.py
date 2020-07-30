@@ -23,5 +23,3 @@ class ContactForm(Form):
     submit = SubmitField("Send")
 
 
-class MyForm(forms.Form):
-    myfield = forms.CharField(widget=forms.TextInput(attrs={'class' : 'myfieldclass'}))
