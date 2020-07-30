@@ -21,3 +21,7 @@ class ContactForm(Form):
     subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
     message = TextAreaField("Message",  validators=[InputRequired("Please enter a message.")])
     submit = SubmitField("Send")
+
+
+class MyForm(forms.Form):
+    myfield = forms.CharField(widget=forms.TextInput(attrs={'class' : 'myfieldclass'}))
