@@ -50,3 +50,13 @@ h2{
     margin-bottom: 50px;
 }
 
+
+
+
+/*---- mobile ----*/
+@media (max-width:641px)  {
+
+    .container{
+        padding: 5px 5px;
+    }
+}
