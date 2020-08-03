@@ -119,7 +119,7 @@ transform: skew(0deg, -10deg) translateY(-120px);
 }
 
 .skewed-container{
-padding: 150px 100px;
+padding: 130px 100px;
 transform: skew(0deg, 10deg);
 }
 
@@ -325,14 +325,14 @@ video {
 
 
 /*-----make skyscrapper parallax disapear in mobile because it looks pants----*/
-.parallax-div{
+section.parallax-div{
     visibility: hidden;
 }
 
 /*-----make skyscrapper parallax disapear in mobile because it looks pants----*/
-.parallax2 {
+/* .parallax2 {
     visibility: hidden;
-}
+} */
 .row.test-row{
     background-color: #26358c;
 }
