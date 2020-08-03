@@ -68,7 +68,7 @@ h2:after{
 
 
 .field{
-	width: 100%;
+	max-width: 100%;
 	border: 2px solid rgba(0, 0, 0, 0);
 	outline: none;
 	background-color: rgba(230, 230, 230, 0.6);
