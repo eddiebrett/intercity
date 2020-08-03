@@ -314,7 +314,7 @@ video {
 
 /*-----make skyscrapper parallax disapear in mobile because it looks pants----*/
 .parallax-hide{
-    visibility: hidden;
+   display: none;
 }
 
 /*-----make skyscrapper parallax disapear in mobile because it looks pants----*/
@@ -324,10 +324,5 @@ video {
     height: 100%;
 }
 
-.overlay {
-    
-    opacity: 0;
-   
-}
 
 }
