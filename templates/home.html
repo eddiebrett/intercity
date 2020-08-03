@@ -1,37 +1,180 @@
-<html lang="en">
+{% extends 'layout.html' %}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link href='https://fonts.googleapis.com/css?family=Lato|Montserrat:700' rel='stylesheet' type='text/css'>
+{% block body %}
+<header class="v-header container">
+	<div class="fullscreen-video-wrap">
+		<video src="static/femalephone.mp4" controls autoplay muted loop></video>
+	</div>
+	<div class="header-overlay"></div>
+	<div class="header-content">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    
-	<link rel="stylesheet" href="static/css/nav.css">
-    <link rel="stylesheet" href="static/css/footer.css">
-    <link rel="stylesheet" href="static/css/contact.css">
-    <link rel="stylesheet" href="static/css/legal.css">
-    
-   
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/homepage.css">
-    <link rel="stylesheet" href="static/css/styles.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- <h1 class="ml11">
+			<span class="text-wrapper">
+            <span class="line line1"></span>
+			
+			<span class="letters">“If we take care of our character, our reputation will take care of us.”</span>
+			</span>
+		</h1> -->
+		<div class="type-js headline">
+			<h1 class="text-js">If we take care of our character, our reputation will take care of us.</h1>
+		</div>
+	</div>
+</header>
+<section class="skewed-box">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>   
-	<title>Document</title>
-</head>
+	<div class="skewed-container">
+		<h1>About InterCity Partners</h1>
+		<br>
+		<p>Based in the heart of London, InterCity Partners is a leading Recruitment Consultancy specialising in
+			delivering Contract and Permanent solutions within IT and Business Change. We take pride in our reputation
+			and operate with one simple principle “If we take care of our character, our reputation will take care of
+			us”. <br><br>
+			Partnered with a range of clients from Start-Ups to Industry leading organisations, we provide staff at all
+			levels to some of the world’s leading Investment Banks and Retail banks, as well as Asset Management,
+			Investment Management and Wealth Management organisations. Our remit also provides expert market
+			intelligence and hiring needs across Retail, Media, E-commerce, Manufacturing and other Fortune 500
+			industries. <br><br>We recruit at all levels across the UK and Europe, from graduate positions to C level appointments.</p>
+	</div>
+	</div>
+</section>
+<section>
+	<div class="parallax-div"></div>
 
-<body>
-	{% include 'navbar.html' %}
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 header-title">
+				<h1>What we do...</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm job-container">
 
-	{% block body %}
-	{% endblock %}
-    {% include 'footer.html' %}
-	<script src="{{ url_for('static', filename='js/nav.js') }}"></script>
-    <!-- <script src="{{ url_for('static', filename='js/home-text.js') }}"></script> -->
-</body>
+				<img src="{{url_for('static', filename='images/hover-icons/software.jpg')}}" alt="software" class="image">
+				<div class="overlay-we-do">
+					<div class="text">Software, Digital
+						&
+						Testing:<br><br>.Net, C#, Java, ASP.net, HTML, CSS, Sharepoint, CRM, MVC, Apache, VB, Silverlight,
+						J2EE, Spring, Websphere, Weblogic, WPF, WCF, Android, iOS, API, Agile, BI, C++, UI, Cognos, Go,
+						Groovy, PHP, PLSQL, JavaScript, MySQL, SQL, Ruby, Python, Perl, Scala, Shell, Angular, Node.js,
+						React, Bootstrap, SSAS, SSIS, SSRS, Selenium, Cucumber, UFT - QTP, SoapUI, Jira, HP ALM, Quality
+						Centre, ISEB.
+					</div>
+					</div>
+					<h3 class="smaller-title">Software, Digital <br>
+                &
+                Testing</h3>
+				</div>
 
-</html>
+
+				<div class="col-sm job-container">
+
+					<img  src="{{url_for('static', filename='images/hover-icons/infrastructure.jpg')}}" alt="Infrastructure" class="image">
+					<div class="overlay-we-do we-do-2">
+						<div class="text">Infrastructure
+							&
+							Architecture: <br><br>Windows Server, RedHat Linux (RHEL), Unix, Ubuntu, Solaris, VMWare, Citrix, NetApp,
+                    TCP/IP, Cisco, Checkpoint, SQL Server, Exchange, Active Directory (AD), Windows OS (Desktop),
+                    CentOs, Apache, Tomcat, JBoss, Nagios, Zabbix, AIX, EMC, HDS, Juniper, Aruba, Oracle Server, MS
+                    Office (Office 365), SCCM
+					</div>
+						</div>
+						<h3 class="smaller-title">Infrastructure <br>
+                &
+                Architecture</h3>
+					</div>
+
+					<div class="col-sm job-container">
+
+						<img src="{{url_for('static', filename='images/hover-icons/cloud.jpg')}}" alt="Cloud
+                &
+                DevOps" class="image">
+						<div class="overlay-we-do">
+							<div class="text">Cloud
+								&
+								DevOps: <br> <br>Amazon Web Services (AWS), VPC, IAM, Microsoft Azure,
+                    Rackspace, Oracle Cloud, Salesforce, Google Cloud, EC2, Powershell, Bash,
+                    Shell, IIS, Puppet, Ansible, Kubernetes, Docker, Terraform, Chef, Jenkins,
+                    CI, CD, TeamCity, ELK, Slack, Git, Octopus Deploy, Maven, GitHub.
+
+					</div>
+							</div>
+							<h3 class="smaller-title">Cloud
+								&
+								DevOps</h3>
+						</div>
+
+						<div class="col-sm job-container">
+
+							<img src="{{url_for('static', filename='images/hover-icons/programme.jpg')}}" alt="Programme
+                Management" class="image">
+							<div class="overlay-we-do we-do-4">
+								<div class="text">Projects
+									&
+									Programme
+									Management:<br><br>Portfolio Management, Programme Management, Project
+                    Management, Business Analysis, Development, Infrastructure, Change,
+                    Data, Release Management, Regulatory, Basel, Brexit, GDPR, Mifid, FATCA,
+                    Dodd Frank, Consumer Credit Act, Security, AML, KYC, Risk, Payments,
+                    PSD2, Mortgages.
+					</div>
+								</div>
+								<h3 class="smaller-title">Projects
+									&<br>
+                Programme
+                Management</h3>
+
+							</div>
+						</div>
+					</div>
+</section>
+
+<section class="parallax2">
+
+	<div class="overlay">
+		<div class="row test-row">
+			<div class="col-12 header-title">
+				<h1>Testomonials</h1>
+			</div>
+
+			<div class="col-lg-4">
+				<p>“InterCity Partners understand the values and the culture of our business. They have provided
+					excellent
+					candidates for a variety of different positions. We have had a brilliant experience and will
+					continue to
+					use them. We recommend them and the high quality service they provide.”
+				</p><br>
+
+				<p>
+					Lead Internal Recruitment Consultant @ Retail Bank</p>
+			</div>
+			<div class="blue-line"></div>
+			<div class="col-lg-4">
+				<p>"InterCity are a forthcoming and professional Recruitment Organisation who provide essential market
+					intelligence as well as exceptional candidates that meet the brief. They understand the businesses
+					and
+					requirements in a way that most Recruiters fail to meet the mark, and stand apart from the standard
+					‘white-socks’ style of selling – A valued resource on our PSL."</p><br>
+				<p>
+					Internal Recruiter, NTT Europe</p>
+			</div>
+			<div class="blue-line"></div>
+			<div class="col-lg-4">
+				<p>“I found InterCity Partners very professional to deal with, as a candidate for a senior role. They
+					knew
+					their client and industry well, kept me informed and went over and above in trying to find out the
+					inside scoop. The Director met with me before each stage of interview, which is always a sign of a
+					professional recruiter, both from the point of view of the candidate and hiring manager. I would not
+					hesitate to engage them or recommend them for a PSL when I next have to do hiring."
+				</p><br>
+				<p>
+					CR – Head of EUC – Financial Services</p>
+			</div>
+			<div class="blue-line"></div>
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}
