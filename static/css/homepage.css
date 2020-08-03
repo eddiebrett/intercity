@@ -78,8 +78,9 @@
 /*------------Letting animation----------------*/
 
 
-// CSS Needed to make it work (Wrote not using SCSS at all copy and paste away)
-// copy and paste into your CSS and the cursor should appear when typing begins
+/* CSS Needed to make it work (Wrote not using SCSS at all copy and paste away)
+// copy and paste into your CSS and the cursor should appear when typing begins */
+
 .text-js{
   opacity: 0;
 }
@@ -92,7 +93,7 @@
   width: 2px;
   /* Change colour of Cursor Here */
   background-color: white;
-  z-index: 1;
+  z-index: 10;
   animation: flash 0.5s none infinite alternate;
 }
 @keyframes flash{
