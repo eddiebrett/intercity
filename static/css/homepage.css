@@ -328,5 +328,8 @@ video {
     height: 100%;
 }
 
+.blue-line {
+    display: flex;
+}
 
 }
