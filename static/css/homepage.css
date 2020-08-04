@@ -125,19 +125,6 @@ transform: skew(0deg, 10deg);
 
 
 
-@media(max-width:960px){
-    .skewed-box{
-        background: white;
-padding; 50px 0;
-transform: skew(0deg, -10deg) translateY(-120px);
-    }
-    .skewed-container{
-padding: 120px 20px;
-transform: skew(0deg, 10deg);
-}
-}
-
-
 /*---- what we do----*/
 .parallax-div{
     display: flex;
@@ -260,16 +247,20 @@ position: relative;
 
 
 
-
-
 /*---- mobile ----*/
-@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (max-width:960px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
     .site-logo {
     position: relative;
     top: 10px;
     left: 33%;
     width: 60%;
     z-index: 100;
+}
+
+/*--- .skewed container padding- take away the gap cause from the parallax disapearing---*/
+
+.skewed-container {
+    padding: 30px 20px 0px 20px;
 }
 
 .parallax2 {
@@ -280,6 +271,10 @@ position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.overlay{
+    opacity: 1;
 }
 
 .overlay-we-do.we-do-2 {
