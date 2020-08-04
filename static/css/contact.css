@@ -210,4 +210,8 @@ h1.display-3.legal-1 {
 .conatainer.form-container {
     padding-top: 70px;
 }
+
+.legal.container.form-container {
+    padding-top: 50px;
+}
 }
