@@ -273,6 +273,11 @@ position: relative;
     opacity: 1;
 }
 
+.container.what-we-do-mobile {
+    position: relative;
+    top: -83px;
+}
+
 .overlay-we-do.we-do-2 {
     left: -100px;
 }
