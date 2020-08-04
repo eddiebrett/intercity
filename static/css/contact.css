@@ -216,7 +216,7 @@ h1.display-3.legal-1 {
 }
 
 .container.legal.h-100 {
-    background-image: url('{{url_for('static', filename='images/worker-laptop.jpg')}}');
+    background-image: url('static', filename='images/worker-laptop.jpg');
 }
 
 }
