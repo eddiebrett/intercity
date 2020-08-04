@@ -44,7 +44,7 @@ h1{
     width: 50px;
     border-radius: 2px;
     background-color: #36bcef;
-    display: none;
+    visibility: hidden;
 }
 
 h2{

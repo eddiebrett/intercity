@@ -329,7 +329,7 @@ video {
 }
 
 .blue-line {
-    display: flex;
+    visibility: visible;
 }
 
 }
