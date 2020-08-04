@@ -202,7 +202,7 @@ iframe {
 }
 
 
-@media (max-width:641px)  {
+@media (max-width:960px)  {
 h1.display-3.legal-1 {
     font-size: 2rem;
 }
