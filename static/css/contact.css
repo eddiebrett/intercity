@@ -200,3 +200,10 @@ iframe {
     height: 20em;
     overflow: hidden;
 }
+
+
+@media (max-width:641px)  {
+h1.display-3.legal-1 {
+    font-size: 2rem;
+}
+}
