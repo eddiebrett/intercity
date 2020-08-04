@@ -202,6 +202,15 @@ iframe {
 }
 
 
+.you-see-me-mobile{
+    visibility: hidden;
+}
+
+.you-see-me-desktop{
+    visibility: visible;
+}
+
+
 @media (max-width:960px)  {
 h1.display-3.legal-1 {
     font-size: 2rem;
@@ -213,5 +222,13 @@ h1.display-3.legal-1 {
 
 .legal.container.form-container {
     padding-top: 50px;
+}
+
+.you-see-me-mobile{
+    visibility: visible;
+}
+
+.you-see-me-desktop{
+    visibility: hidden;
 }
 }
