@@ -216,7 +216,7 @@ h1.display-3.legal-1 {
 }
 
 .container.legal.h-100 {
-    background-image: url('/static/images/worker-laptop.jpg');
+   background-color: #0167b3;
 }
 
 }
