@@ -34,18 +34,6 @@ h1{
     text-align: center;
 }
 
-.blue-line{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #36bcef;
-    visibility: hidden;
-}
 
 h2{
     margin-bottom: 50px;

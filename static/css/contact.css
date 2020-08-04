@@ -206,4 +206,8 @@ iframe {
 h1.display-3.legal-1 {
     font-size: 2rem;
 }
+
+.conatainer.form-container {
+    padding-top: 70px;
+}
 }
