@@ -42,7 +42,7 @@ def privacy():
 
 @app.route('/candidates', methods=['GET', 'POST'])
 def candidates():
-    form = ContactForm()
+    form = CandidatesForm()
 
     if request.method == 'POST':
         if form.validate() == False:
