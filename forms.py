@@ -38,6 +38,7 @@ class CandidatesForm(Form):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a subject.")])
-    upload = FileField('image', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'Images only!')
+    upload = FileField('image', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'Images only!')])
     message = TextAreaField("Message", validators=[InputRequired("Please enter a message.")])
     submit = SubmitField("Send")
+
