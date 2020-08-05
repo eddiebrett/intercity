@@ -224,4 +224,13 @@ h1.display-3.legal-1 {
 .row{
         padding-top: 40px;
 }
+
+.field{
+    width: 50%; 
+}
+
+.contact-box{
+    visibility: hidden;
+}
+
 }
