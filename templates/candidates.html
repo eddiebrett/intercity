@@ -56,7 +56,7 @@
 			<div class="flash">{{ message }}</div>
 			{% endfor %}
 
-            {% for message in form.cv.errors %}
+            {% for message in form.upload.errors %}
 			<div class="flash">{{ message }}</div>
 			{% endfor %}
 
@@ -64,7 +64,7 @@
 			<div class="flash">{{ message }}</div>
 			{% endfor %}
 
-			<form action="{{ url_for('contact') }}" method=post>
+			<form enctype="multipart/form-data" action="{{ url_for('contact') }}" method=post>
 				{{ form.hidden_tag() }}
 
 				{{ form.name.label }}
@@ -76,8 +76,8 @@
                 {{ form.telephone.label }}
 				{{ form.telephone(class_="field")}}
 
-                {{ form.cv.label }}
-				{{ form.cv(class_="field")}}
+                {{ form.upload.label }}
+				{{ form.upload(class_="field")}}
 
 				{{ form.message.label }}
 				{{ form.message(class_="field textarea")}}

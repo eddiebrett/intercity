@@ -57,7 +57,7 @@ def candidates():
             msg.body = """
             From: %s &lt;%s&gt;
             %s
-            """ % (form.name.data, form.email.data, form.message.data)
+            """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data)
             mail.send(msg)
 
             return render_template('candidates.html', success=True)
@@ -78,7 +78,7 @@ def clients():
             msg.body = """
             From: %s &lt;%s&gt;
             %s
-            """ % (form.name.data, form.email.data, form.message.data)
+            """ % (form.name.data, form.company.data, form.role.data, form.email.data, form.telephone.data, form.message.data)
             mail.send(msg)
 
             return render_template('clients.html', success=True)
