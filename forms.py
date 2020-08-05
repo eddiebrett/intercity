@@ -30,6 +30,7 @@ class ClientsForm(Form):
     role = TextField("Role", validators=[InputRequired('Please enter your job role.')])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a subject.")])
+    subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
     message = TextAreaField("Message", validators=[InputRequired("Please enter a message.")])
     submit = SubmitField("Send")
 
@@ -39,6 +40,7 @@ class CandidatesForm(Form):
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a subject.")])
     upload = FileField('image', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'Images only!')])
+    subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
     message = TextAreaField("Message", validators=[InputRequired("Please enter a message.")])
     submit = SubmitField("Send")
 
