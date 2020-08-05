@@ -37,62 +37,62 @@ London<br>
 E2 9HE<br><br>
 Tel: 0208 980 8583
 
-<br><br>
+			<br><br>
 Opening hours: <br>
 7am - 7pm, Monday - Friday
 
 </div>
-		
 
-	</div>
 
-	<div class="contact_container">
-
-		<div class="right contact-box">
-
-			{% if success %}
-			<p>Thank you for your message. We'll get back to you shortly.</p>
-
-			{% else %}
-
-			{% for message in form.name.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			{% for message in form.email.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			{% for message in form.subject.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			{% for message in form.message.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
-
-			<form action="{{ url_for('contact') }}" method=post>
-				{{ form.hidden_tag() }}
-
-				{{ form.name.label }}
-				{{ form.name(class_="field")}}
-
-				{{ form.email.label }}
-				{{ form.email(class_="field")}}
-
-				{{ form.subject.label }}
-				{{ form.subject(class_="field")}}
-
-				{{ form.message.label }}
-				{{ form.message(class_="field textarea")}}
-
-				{{ form.submit }}
-			</form>
 		</div>
+
+		<div class="contact_container">
+
+			<div class="right contact-box">
+
+				{% if success %}
+				<p>Thank you for your message. We'll get back to you shortly.</p>
+
+				{% else %}
+
+				{% for message in form.name.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				{% for message in form.email.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				{% for message in form.subject.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				{% for message in form.message.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				<form action="{{ url_for('contact') }}" method=post>
+					{{ form.hidden_tag() }}
+
+					{{ form.name.label }}
+					{{ form.name(class_="field")}}
+
+					{{ form.email.label }}
+					{{ form.email(class_="field")}}
+
+					{{ form.subject.label }}
+					{{ form.subject(class_="field")}}
+
+					{{ form.message.label }}
+					{{ form.message(class_="field textarea")}}
+
+					{{ form.submit }}
+				</form>
+			</div>
+		</div>
+
 	</div>
 
-</div>
 
-
-{% endif %}
-{% endblock %}
+	{% endif %}
+	{% endblock %}

@@ -39,51 +39,51 @@
 	<div class="right">
 
 		<h2>Contact Us</h2>
-        {% if success %}
-			<p>Thank you for your message. We'll get back to you shortly.</p>
+		{% if success %}
+		<p>Thank you for your message. We'll get back to you shortly.</p>
 
-			{% else %}
+		{% else %}
 
-			{% for message in form.name.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
+		{% for message in form.name.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
 
-			{% for message in form.email.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
+		{% for message in form.email.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
 
-            {% for message in form.telephone.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
+		{% for message in form.telephone.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
 
-            {% for message in form.upload.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
+		{% for message in form.upload.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
 
-			{% for message in form.message.errors %}
-			<div class="flash">{{ message }}</div>
-			{% endfor %}
+		{% for message in form.message.errors %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
 
-			<form enctype="multipart/form-data" action="{{ url_for('contact') }}" method=post>
-				{{ form.hidden_tag() }}
+		<form enctype="multipart/form-data" action="{{ url_for('contact') }}" method=post>
+			{{ form.hidden_tag() }}
 
-				{{ form.name.label }}
-				{{ form.name(class_="field")}}
+			{{ form.name.label }}
+			{{ form.name(class_="field")}}
 
-				{{ form.email.label }}
-				{{ form.email(class_="field")}}
+			{{ form.email.label }}
+			{{ form.email(class_="field")}}
 
-                {{ form.telephone.label }}
-				{{ form.telephone(class_="field")}}
+			{{ form.telephone.label }}
+			{{ form.telephone(class_="field")}}
 
-                {{ form.upload.label }}
-				{{ form.upload(class_="field")}}
+			{{ form.upload.label }}
+			{{ form.upload(class_="field")}}
 
-				{{ form.message.label }}
-				{{ form.message(class_="field textarea")}}
+			{{ form.message.label }}
+			{{ form.message(class_="field textarea")}}
 
-				{{ form.submit }}
-			</form>
+			{{ form.submit }}
+		</form>
 		<!-- <input type="text" class="field" placeholder="Your Name">
 		<input type="text" class="field" placeholder="Your Email">
 		<input type="text" class="field" placeholder="Phone">
@@ -95,7 +95,7 @@
 		<textarea placeholder="Message" class="field"></textarea>
 		<button class="btn">Send</button>
 	 -->
+	</div>
 </div>
-</div>
-
+{% endif %}
 {% endblock %}
