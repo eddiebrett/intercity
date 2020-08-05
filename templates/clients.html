@@ -69,27 +69,20 @@
 
 		<form action="{{ url_for('contact') }}" method=post>
 			{{ form.hidden_tag() }}
+			
+			{{ form.name.label }} {{ form.name(class_="field")}}
 
-			{{ form.name.label }}
-			{{ form.name(class_="field")}}
+			{{ form.company.label }} {{ form.company(class_="field")}}
+		
+			{{ form.role.label }} {{ form.role(class_="field")}}
 
-			{{ form.company.label }}
-			{{ form.company(class_="field")}}
+			{{ form.email.label }} {{ form.email(class_="field")}}
 
-			{{ form.role.label }}
-			{{ form.role(class_="field")}}
+			{{ form.telephone.label }} {{ form.telephone(class_="field")}}
 
-			{{ form.email.label }}
-			{{ form.email(class_="field")}}
+            {{ form.subject.label }} {{ form.subject(class_="field")}}
 
-			{{ form.telephone.label }}
-			{{ form.telephone(class_="field")}}
-
-            {{ form.subject.label }}
-			{{ form.subject(class_="field")}}
-
-			{{ form.message.label }}
-			{{ form.message(class_="field textarea")}}
+			{{ form.message.label }} {{ form.message(class_="field textarea")}}
 
 			{{ form.submit }}
 		</form>
