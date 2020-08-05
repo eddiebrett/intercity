@@ -67,7 +67,7 @@ def candidates():
 
 @app.route('/clients', methods=['GET', 'POST'])
 def clients():
-    form = ContactForm()
+    form = ClientsForm()
 
     if request.method == 'POST':
         if form.validate() == False:
@@ -88,7 +88,7 @@ def clients():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    form = ContactForm()
+    form = CandidatesForm()
 
     if request.method == 'POST':
         if form.validate() == False:
@@ -106,6 +106,6 @@ def contact():
     elif request.method == 'GET':
         return render_template('contact.html', form=form)
 
-       
+
 if __name__ == "__main__":
     app.run()
