@@ -39,17 +39,62 @@
 	<div class="right">
 
 		<h2>Contact Us</h2>
-		<input type="text" class="field" placeholder="Your Name">
+        {% if success %}
+			<p>Thank you for your message. We'll get back to you shortly.</p>
+
+			{% else %}
+
+			{% for message in form.name.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %}
+
+			{% for message in form.email.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %}
+
+            {% for message in form.telephone.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %}
+
+            {% for message in form.cv.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %}
+
+			{% for message in form.message.errors %}
+			<div class="flash">{{ message }}</div>
+			{% endfor %}
+
+			<form action="{{ url_for('contact') }}" method=post>
+				{{ form.hidden_tag() }}
+
+				{{ form.name.label }}
+				{{ form.name(class_="field")}}
+
+				{{ form.email.label }}
+				{{ form.email(class_="field")}}
+
+                {{ form.telephone.label }}
+				{{ form.telephone(class_="field")}}
+
+                {{ form.cv.label }}
+				{{ form.cv(class_="field")}}
+
+				{{ form.message.label }}
+				{{ form.message(class_="field textarea")}}
+
+				{{ form.submit }}
+			</form>
+		<!-- <input type="text" class="field" placeholder="Your Name">
 		<input type="text" class="field" placeholder="Your Email">
 		<input type="text" class="field" placeholder="Phone">
 		<div class="form-group">
-			<label for="exampleFormControlFile1">Upload CV</label>
-			<input type="file" class="form-control-file" id="exampleFormControlFile1">
+			<label for="cvUpload">Upload CV</label>
+			<input type="file" class="form-control-file" id="cvUpload">
         </div>
 
 		<textarea placeholder="Message" class="field"></textarea>
 		<button class="btn">Send</button>
-	
+	 -->
 </div>
 </div>
 
