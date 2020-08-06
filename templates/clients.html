@@ -67,14 +67,17 @@
 		<form action="{{ url_for('contact') }}" method=post>
 			{{ form.hidden_tag() }}
 			
+            {{ form.company.label }} 
+            {{ form.company(class_="field")}}
+
 			{{ form.name.label }}
             {{ form.name(class_="field")}}
-
-			{{ form.company.label }} 
-            {{ form.company(class_="field")}}
 		
 			{{ form.role.label }} 
             {{ form.role(class_="field")}}
+
+			{{ form.position.label }} 
+            {{ form.position(class_="field")}}
 
 			{{ form.email.label }} 
             {{ form.email(class_="field")}}

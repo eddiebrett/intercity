@@ -27,7 +27,8 @@ class ContactForm(Form):
 class ClientsForm(Form):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     company = TextField("Company", validators=[InputRequired('Please enter your company name.')])
-    role = TextField("Role", validators=[InputRequired('Please enter your job role.')])
+    role = TextField("Job title", validators=[InputRequired('Please enter your job title.')])
+    position = TextField("Position to fill", validators=[InputRequired('Please enter the position you wish to fill.')])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a subject.")])
     subject = TextField("Subject",  validators=[InputRequired("Please enter a telephone number.")])
@@ -39,7 +40,7 @@ class CandidatesForm(Form):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a telephone numbers.")])
-    upload = FileField('image', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'Images only!')])
+    upload = FileField('Resume', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'Images only!')])
     subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
     message = TextAreaField("Message", validators=[InputRequired("Please enter a message.")])
     submit = SubmitField("Send")
