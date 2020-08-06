@@ -241,6 +241,8 @@ position: relative;
 
 .header-title{
     display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
     justify-content: center;
     position: relative;
     
@@ -357,6 +359,11 @@ video {
 
 .blue-line {
     visibility: visible;
+}
+
+.header-title{
+    height: 1%;
+    padding-top: 30px;  
 }
 
 }

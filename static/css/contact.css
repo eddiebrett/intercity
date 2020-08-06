@@ -93,6 +93,7 @@ input#submit:hover{
 
 .field{
     width: 400px;
+    height: 40px;
     border-width: 2px;
     border-color:   #36bcef;
     border-radius: 5px;
