@@ -4,6 +4,7 @@ from flask_mail import Message, Mail
 
 mail = Mail()
 
+
 app = Flask(__name__)
 
 app.secret_key = 'development key'
@@ -104,4 +105,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=False)
