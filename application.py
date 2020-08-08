@@ -4,8 +4,9 @@ from flask_mail import Message, Mail
 
 mail = Mail()
 
+application = Flask(__name__)
 
-app = Flask(__name__)
+app = application
 
 app.secret_key = 'development key'
 
