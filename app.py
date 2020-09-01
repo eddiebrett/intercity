@@ -5,8 +5,7 @@ from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
 from flask_mail import Message, Mail
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
 mail = Mail(app)
 
 
