@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+import os
 from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
 from flask_mail import Message, Mail
@@ -14,8 +17,8 @@ app.config["MAIL_SERVER"] = "smtp.office365.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
-app.config["MAIL_USERNAME"] = 'bobbydylan20202020@gmail.com'
-app.config["MAIL_PASSWORD"] = 'BobDylan2020'
+app.config["MAIL_USERNAME"] = os.getenv('MAIL_USERNAME')
+app.config["MAIL_PASSWORD"] = os.getenv('MAIL_PASSWORD')
 
 mail.init_app(app)
 
@@ -52,7 +55,7 @@ def candidates():
             flash('All fields are required.')
             return render_template('candidates.html', form=form)
         else:
-            msg = Message(form.subject.data, sender='bobbydylan20202020@gmail.com', recipients=['bobbydylan20202020@gmail.com'])
+            msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
             From: %s &lt;%s&gt;
             %s
@@ -73,7 +76,7 @@ def clients():
             flash('All fields are required.')
             return render_template('clients.html', form=form)
         else:
-            msg = Message(form.subject.data, sender='bobbydylan20202020@gmail.com', recipients=['bobbydylan20202020@gmail.com'])
+            msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
             From: %s &lt;%s&gt;
             %s
@@ -94,7 +97,7 @@ def contact():
             flash('All fields are required.')
             return render_template('contact.html', form=form)
         else:
-            msg = Message(form.subject.data, sender='bobbydylan20202020@gmail.com', recipients=['bobbydylan20202020@gmail.com'])
+            msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
             From: %s &lt;%s&gt;
             %s
