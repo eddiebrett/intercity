@@ -5,11 +5,11 @@ from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
 from flask_mail import Message, Mail
 
-mail = Mail()
-
 application = Flask(__name__)
-
 app = application
+mail = Mail(app)
+
+
 
 app.secret_key = 'development key'
 
@@ -56,10 +56,7 @@ def candidates():
             return render_template('candidates.html', form=form)
         else:
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
-            msg.body = """
-            From: %s &lt;%s&gt;
-            %s
-            """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data)
+            msg.body = form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data
             mail.send(msg)
 
             return render_template('candidates.html', success=True)
