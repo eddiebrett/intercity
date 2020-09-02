@@ -5,8 +5,8 @@ from flask_mail import Message, Mail
 # from dotenv import load_dotenv
 # load_dotenv()
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
+
 mail = Mail(app)
 
 app.secret_key = 'development key'
