@@ -1,1 +1,1 @@
-web: gunicorn app:application
+gunicorn  app:application -b 127.0.0.1:5000
