@@ -1,15 +1,13 @@
-from dotenv import load_dotenv
-load_dotenv()
 import os
 from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
 from flask_mail import Message, Mail
+from dotenv import load_dotenv
+load_dotenv()
 
 application = Flask(__name__)
 app = application
 mail = Mail(app)
-
-
 
 app.secret_key = 'development key'
 
