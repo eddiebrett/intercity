@@ -276,7 +276,7 @@ position: relative;
 @media (max-width:960px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 
     html, body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .site-logo {
