@@ -274,6 +274,12 @@ position: relative;
 
 /*---- mobile ----*/
 @media (max-width:960px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
     .site-logo {
     position: relative;
     top: 10px;
