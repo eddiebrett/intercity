@@ -2,7 +2,8 @@ import os
 from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
 from flask_mail import Message, Mail
-from flask_sslify import SSlify
+from flask_sslify import SSLify
+
 # from flask_talisman import Talisman
 # from dotenv import load_dotenv
 # load_dotenv()
