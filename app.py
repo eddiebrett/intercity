@@ -8,6 +8,22 @@ from flask_talisman import Talisman
 
 app = Flask(__name__)
 Talisman(app)
+csp = {
+    'default-src': [
+        '\'self\'',
+        '\'unsafe-inline\'',
+        'stackpath.bootstrapcdn.com',
+        'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',
+        'https://fonts.googleapis.com/css?family=Lato|Montserrat:700',
+        'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
+        'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',
+        'code.jquery.com',
+        'cdn.jsdelivr.net'
+    ]
+}
+talisman = Talisman(app, content_security_policy=csp)
 
 mail = Mail(app)
 
