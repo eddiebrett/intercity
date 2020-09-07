@@ -2,28 +2,32 @@ import os
 from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
 from flask_mail import Message, Mail
-from flask_talisman import Talisman
+from flask_sslify import SSlify
+# from flask_talisman import Talisman
 # from dotenv import load_dotenv
 # load_dotenv()
 
 app = Flask(__name__)
-Talisman(app)
-csp = {
-    'default-src': [
-        '\'self\'',
-        '\'unsafe-inline\'',
-        'stackpath.bootstrapcdn.com',
-        'stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',
-        'fonts.googleapis.com/css?family=Lato|Montserrat:700',
-        'maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
-        'fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
-        'cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js',
-        'cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',
-        'code.jquery.com',
-        'cdn.jsdelivr.net'
-    ]
-}
-talisman = Talisman(app, content_security_policy=csp)
+sslify = SSLify(app)
+
+# Talisman is the newer version of sslify to replace eventually
+# Talisman(app)
+# csp = {
+#     'default-src': [
+#         '\'self\'',
+#         '\'unsafe-inline\'',
+#         'stackpath.bootstrapcdn.com',
+#         'stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',
+#         'fonts.googleapis.com/css?family=Lato|Montserrat:700',
+#         'maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
+#         'fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+#         'cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js',
+#         'cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',
+#         'code.jquery.com',
+#         'cdn.jsdelivr.net'
+#     ]
+# }
+# talisman = Talisman(app, content_security_policy=csp)
 
 mail = Mail(app)
 
