@@ -11,6 +11,7 @@ from flask_sslify import SSLify
 app = Flask(__name__)
 sslify = SSLify(app)
 
+
 # Talisman is the newer version of sslify to replace eventually
 # Talisman(app)
 # csp = {
@@ -30,23 +31,29 @@ sslify = SSLify(app)
 # }
 # talisman = Talisman(app, content_security_policy=csp)
 
-mail = Mail(app)
-
 app.secret_key = 'development key'
 
 app.config["MAIL_SERVER"] = "smtp.office365.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
-app.config["MAIL_USERNAME"] = os.getenv('MAIL_USERNAME')
-app.config["MAIL_PASSWORD"] = os.getenv('MAIL_PASSWORD')
-
-mail.init_app(app)
+app.config["MAIL_USERNAME"] = "recruitment@intercitypartners.com"
+app.config["MAIL_PASSWORD"] = "SimonS@y5"
+app.config["MAIL_DEFAULT_SENDER"] = "recruitment@intercitypartners.com"
+# os.getenv('MAIL_USERNAME')
+# os.getenv('MAIL_PASSWORD')
+mail = Mail(app)
+# mail.init_app(app)
 
 
 @app.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    msg = Message('hey there', recipients=['eddiebrett@hotmail.co.uk'])
+    mail.send(msg)
+
+    return 'Message sent!'
+# def home():
+#     return render_template('home.html')
 
 
 # @app.route('/candidates')
@@ -76,7 +83,7 @@ def candidates():
             flash('All fields are required.')
             return render_template('candidates.html', form=form)
         else:
-            msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
+            msg = Message(form.subject.data, recipients=['eddiebrett@hotmail.co.uk'])
             msg.body = form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data
             mail.send(msg)
 
