@@ -47,13 +47,13 @@ mail = Mail(app)
 
 
 @app.route('/')
-def index():
-    msg = Message('hey there', recipients=['eddiebrett@hotmail.co.uk'])
-    mail.send(msg)
+# def index():
+#     msg = Message('hey there', recipients=['eddiebrett@hotmail.co.uk'])
+#     mail.send(msg)
 
-    return 'Message sent!'
-# def home():
-#     return render_template('home.html')
+#     return 'Message sent!'
+def home():
+    return render_template('home.html')
 
 
 # @app.route('/candidates')
