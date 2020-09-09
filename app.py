@@ -1,8 +1,10 @@
 import os
 from flask import Flask, render_template, request, flash
 from forms import ContactForm, ClientsForm, CandidatesForm
-from flask_mail import Message, Mail
+from flask_mail import Mail, Message
 from flask_sslify import SSLify
+from dotenv import load_dotenv
+load_dotenv()
 
 # from flask_talisman import Talisman
 # from dotenv import load_dotenv
@@ -37,21 +39,14 @@ app.config["MAIL_SERVER"] = "smtp.office365.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
-app.config["MAIL_USERNAME"] = "recruitment@intercitypartners.com"
-app.config["MAIL_PASSWORD"] = "SimonS@y5"
-app.config["MAIL_DEFAULT_SENDER"] = "recruitment@intercitypartners.com"
-# os.getenv('MAIL_USERNAME')
-# os.getenv('MAIL_PASSWORD')
+app.config["MAIL_USERNAME"] = os.getenv('MAIL_USERNAME')
+app.config["MAIL_PASSWORD"] = os.getenv('MAIL_PASSWORD')
+app.config["MAIL_DEFAULT_SENDER"] = os.getenv('MAIL_USERNAME')
+
 mail = Mail(app)
-# mail.init_app(app)
 
 
 @app.route('/')
-# def index():
-#     msg = Message('hey there', recipients=['eddiebrett@hotmail.co.uk'])
-#     mail.send(msg)
-
-#     return 'Message sent!'
 def home():
     return render_template('home.html')
 
@@ -87,7 +82,7 @@ def candidates():
             msg.body = form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data
             mail.send(msg)
 
-            return render_template('candidates.html', success=True)
+            return render_template('success.html', success=True)
     elif request.method == 'GET':
         return render_template('candidates.html', form=form)
 
@@ -108,7 +103,7 @@ def clients():
             """ % (form.name.data, form.company.data, form.role.data, form.email.data, form.telephone.data, form.position.datat, form.message.data)
             mail.send(msg)
 
-            return render_template('clients.html', success=True)
+            return render_template('success.html', success=True)
     elif request.method == 'GET':
         return render_template('clients.html', form=form)
 
@@ -129,7 +124,7 @@ def contact():
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
 
-            return render_template('contact.html', success=True)
+            return render_template('success.html', success=True)
     elif request.method == 'GET':
         return render_template('contact.html', form=form)
 
