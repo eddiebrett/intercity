@@ -1,4 +1,3 @@
-from flask_wtf import Form
 from flask_wtf import FlaskForm
 from wtforms import TextField, TextAreaField, SubmitField, validators, IntegerField, FileField
 from flask_wtf.file import FileField, FileAllowed, FileRequired
@@ -16,7 +15,7 @@ from wtforms.fields.html5 import EmailField
 
 # from flask.ext.wtf import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
 
-class ContactForm(Form):
+class ContactForm(FlaskForm):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     email = EmailField("Email",  validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
@@ -24,7 +23,7 @@ class ContactForm(Form):
     submit = SubmitField("Send")
 
 
-class ClientsForm(Form):
+class ClientsForm(FlaskForm):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     company = TextField("Company", validators=[InputRequired('Please enter your company name.')])
     role = TextField("Job title", validators=[InputRequired('Please enter your job title.')])
@@ -36,7 +35,7 @@ class ClientsForm(Form):
     submit = SubmitField("Send")
 
 
-class CandidatesForm(Form):
+class CandidatesForm(FlaskForm):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a telephone numbers.")])
