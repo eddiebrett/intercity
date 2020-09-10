@@ -1,0 +1,61 @@
+@media only screen and (max-width: 768px)
+footer {
+    min-height: 500px !important;
+   
+}
+
+footer {
+    background: linear-gradient(245deg, white, #36bcef,  #25358c);
+    /* background-size: 600% 600%; */
+    -webkit-animation: Gradient 16s ease infinite;
+    -moz-animation: Gradient 16s ease infinite;
+    animation: Gradient 16s ease infinite;
+    min-height: 320px;
+    padding: 5% 5% 100px;
+    position: relative;
+}
+
+user agent stylesheet
+footer {
+    display: block;
+}
+
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+
+.small{text-align: center;}
+
+
+.fa{
+     padding: 5px 5px 5px 5px;
+     color: #25358c;
+}
+.fa:hover{
+     
+     color: #7480c5;
+}
+
+
+.footer-text{
+    color: white;
+}
+
+img.corporate-image {
+    width: 50%;
+}
+
+.privacy{
+    text-align: center;
+
+}
+
+.privacy-a{
+    color: white;
+}
