@@ -110,7 +110,7 @@ def clients():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    form = CandidatesForm()
+    form = ContactForm()
 
     if request.method == 'POST':
         if form.validate() == False:
