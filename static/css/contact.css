@@ -126,12 +126,6 @@ iframe {
 }
 
 
-/*---- success page--------*/
-.success-page {
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
 
 @media (max-width:960px)  {
 h1.display-3.legal-1 {
