@@ -12,7 +12,7 @@ class CandidatesForm(FlaskForm):
     name = TextField("Name", validators=[InputRequired('Please enter your name.')])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address."), validators.Email("Please enter your email address.")])
     telephone = IntegerField("Telephone", validators=[InputRequired("Please enter a telephone numbers.")])
-    upload = FileField('Resume', validators=[FileRequired(), FileAllowed(['jpg', 'png', 'pdf'], 'Images only!')])
+    upload = FileField('Resume', validators=[FileRequired(), FileAllowed(['pdf'], 'Please attach as PDF')])
     subject = TextField("Subject",  validators=[InputRequired("Please enter a subject.")])
     message = TextAreaField("Message", validators=[InputRequired("Please enter a message.")])
     submit = SubmitField("Send")
