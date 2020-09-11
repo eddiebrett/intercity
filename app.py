@@ -101,7 +101,7 @@ def clients():
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
             Name: %s Company name: %s Role: %s Email: %s Telephone: %s 
-            Position: %s Message: %s
+            Position to fill: %s Message: %s
             """ % (form.name.data, form.company.data, form.role.data, form.email.data, form.telephone.data, form.position.data, form.message.data)
             mail.send(msg)
 
