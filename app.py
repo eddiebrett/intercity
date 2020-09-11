@@ -42,6 +42,7 @@ app.config["MAIL_USE_SSL"] = False
 app.config["MAIL_USERNAME"] = os.getenv('MAIL_USERNAME')
 app.config["MAIL_PASSWORD"] = os.getenv('MAIL_PASSWORD')
 app.config["MAIL_DEFAULT_SENDER"] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_ASCII_ATTACHMENTS'] = True
 
 mail = Mail(app)
 
@@ -82,6 +83,9 @@ def candidates():
             msg.body =  """
             Name: %s Email: %s Telephone: %s CV: %s Message: %s 
             """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data)
+            app.open_resource(form.upload.data) as fp:
+            msg.attach(form.upload.data, fp.read())
+
             mail.send(msg)
 
             return render_template('success.html', success=True)
