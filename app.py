@@ -78,8 +78,10 @@ def candidates():
             flash('All fields are required.')
             return render_template('candidates.html', form=form)
         else:
-            msg = Message(form.subject.data, recipients=['eddiebrett@hotmail.co.uk'])
-            msg.body = form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data
+            msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
+            msg.body =  """
+            Name: %s Email: %s Telephone: %s CV: %s Message: %s 
+            """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data
             mail.send(msg)
 
             return render_template('success.html', success=True)
@@ -98,9 +100,9 @@ def clients():
         else:
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
-            From: %s &lt;%s&gt;
-            %s
-            """ % (form.name.data, form.company.data, form.role.data, form.email.data, form.telephone.data, form.position.datat, form.message.data)
+            Name: %s Company name: %s Role: %s Email: %s Telephone: %s 
+            Position: %s Message: %s
+            """ % (form.name.data, form.company.data, form.role.data, form.email.data, form.telephone.data, form.position.data, form.message.data)
             mail.send(msg)
 
             return render_template('success.html', success=True)
@@ -119,7 +121,7 @@ def contact():
         else:
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
-            From: %s &lt;%s&gt;
+            Name: %s Email: %s Message;
             %s
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
