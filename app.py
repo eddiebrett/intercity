@@ -83,8 +83,8 @@ def candidates():
             msg.body =  """
             Name: %s Email: %s Telephone: %s CV: %s Message: %s 
             """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data)
-            app.open_resource(form.upload.data) as fp:
-            msg.attach(form.upload.data, fp.read())
+            with app.open_resource(files) as fp:
+                msg.attach(files, "image/png", fp.read())
 
             mail.send(msg)
 
