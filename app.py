@@ -81,7 +81,7 @@ def candidates():
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body =  """
             Name: %s Email: %s Telephone: %s CV: %s Message: %s 
-            """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data
+            """ % (form.name.data, form.email.data, form.telephone.data, form.upload.data, form.message.data)
             mail.send(msg)
 
             return render_template('success.html', success=True)
