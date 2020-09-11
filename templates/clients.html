@@ -64,7 +64,7 @@
 		<div class="flash">{{ message }}</div>
 		{% endfor %}
 
-		<form action="{{ url_for('contact') }}" method=post>
+		<form action="{{ url_for('clients') }}" method=post>
 			{{ form.hidden_tag() }}
 			
             {{ form.company.label }} 

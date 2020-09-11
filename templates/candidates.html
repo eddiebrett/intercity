@@ -64,7 +64,7 @@
 		<div class="flash">{{ message }}</div>
 		{% endfor %}
 
-		<form enctype="multipart/form-data" action="{{ url_for('contact') }}" method=post>
+		<form enctype="multipart/form-data" action="{{ url_for('candidates') }}" method=post>
 			{{ form.hidden_tag() }}
 
 			{{ form.name.label }}

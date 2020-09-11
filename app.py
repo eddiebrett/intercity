@@ -121,7 +121,7 @@ def contact():
         else:
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body = """
-            Name: %s Email: %s Message;
+            Name: %s Email: %s Message:
             %s
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
