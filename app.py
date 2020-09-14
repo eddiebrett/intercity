@@ -85,7 +85,7 @@ def candidates():
             """ % (form.name.data, form.email.data, form.telephone.data, form.message.data)
             msg.attach(
                 form.upload.data.filename,
-                'application/pdf',
+                'application/octet-stream',
                 form.upload.data.read())
             mail.send(msg)
 
