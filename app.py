@@ -81,7 +81,7 @@ def candidates():
         else:
             msg = Message(form.subject.data, sender=os.getenv('MAIL_USERNAME'), recipients=[os.getenv('MAIL_USERNAME')])
             msg.body =  """
-            Name: %s Email: %s Telephone: %s CV: %s Message: %s 
+            Name: %s Email: %s Telephone: %s Message: %s 
             """ % (form.name.data, form.email.data, form.telephone.data, form.message.data)
             msg.attach(
                 form.upload.data.filename,
